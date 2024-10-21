@@ -15,5 +15,12 @@
  */
 
 export default function functionLength(fn) {
-    throw 'Not implemented';
+    if (typeof fn !== 'function') {
+        throw new Error('Please provide a valid function');
+    }
+    return fn.length;
 }
+
+function fun1() {}
+function fun2(a) {}
+function fun3(c, d) {}
